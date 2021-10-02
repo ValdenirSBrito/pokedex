@@ -45,45 +45,19 @@
 
     <section id="pokedex">
         
-        <a class="card" href="/details/0">
-            <img src="ghjghjghj" alt="">
-            <h2>
-                dfgdfg
-            </h2>
-            <h4>
-                sdfsdf
-            </h4>
-        </a>
-        
-        <a class="card" href="/details/1">
-            <img src="a" alt="">
-            <h2>
-                a
-            </h2>
-            <h4>
-                a
-            </h4>
-        </a>
-        
-        <a class="card" href="/details/2">
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="">
-            <h2>
-                Charmander
-            </h2>
-            <h4>
-                Fire
-            </h4>
-        </a>
-        
-        <a class="card" href="/details/3">
-            <img src="e" alt="">
-            <h2>
-                Etec
-            </h2>
-            <h4>
-                e
-            </h4>
-        </a>
+        <% pokedex.forEach(item => { %>
+            <div class="item-pokedex">
+                <div class="item-titulo <%= item.tipo %>">
+                    <a href="/detalhes/<%= item.numero %>">
+                    <%= item.numero%> - <%= item.nome %></a>
+                </div>
+                <div class="item-imagem">
+                    <a href="/detalhes/<%= item.numero %>">
+                    <img src="<% if (item.imagem == "" || !item.imagem) { %>./assets/img/question.png">
+                    <% } else { %><%= item.imagem %>"> <% } %></a>
+                </div>
+            </div>
+        <% }) %>
         
 </section>
         <ul>
