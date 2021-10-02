@@ -47,20 +47,25 @@
         
         <% pokedex.forEach(item => { %>
             <div class="item-pokedex">
-                <!-- <div class="item-titulo <%= item.tipo %>">
-                    <a href="/detalhes/<%= item.numero %>">
-                    <%= item.numero%> - <%= item.nome %></a>
-                </div> -->
+                <div class="item-titulo <%= item.nome %>">
+                    <a href="/detalhes/<%= item.nome %>">
+                        <%= item.nome %></a>
+                </div>
                 <div class="item-imagem">
                     <a href="/detalhes/<%= item.numero %>">
                     <img src="<% if (item.imagem == "" || !item.imagem) { %>./assets/img/question.png">
                     <% } else { %><%= item.imagem %>"> <% } %></a>
                 </div>
+                <div class="item-tipo">
+                    <a href="/detalhes/<%= item.tipo %>">
+                        <%= item.tipo %></a>
+                    
+                </div>
             </div>
         <% }) %>
         
 </section>
-     
+
     <script src="/js/script.js"></script>
 
     <footer>
