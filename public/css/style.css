@@ -330,6 +330,19 @@
     border-radius: 1rem;
     
   }
+
+  section#details div#infos div#info-datail h4 {
+    font-size: 2rem;
+    font-weight: 100;
+    padding: 0.5rem 0 1rem 0;
+    
+  }
+
+  section#details div#infos h4 {
+    padding-top: 3rem;
+    font-size: 2rem;
+    color: rgb(245, 11, 11);
+  }
   
   
   section#details div#infos div#info-datail h3 {
