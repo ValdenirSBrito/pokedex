@@ -7,22 +7,59 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Detalhes</h1>
-    <article id="content">
-        <h3>Desenvolvimento de Software</h3>
+    <nav>
+        <article>
+            <img src="/img/pokeball2.gif" class="img-fluid gif" alt="Animação PokeBola">
+            <h1><a href="/">Pokedéx</a></h1>
+
+        </article>
         <ul>
-            <% devList.forEach(item => { %>
-                <li><%= item %></li>
-            <% }) %> 
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="/cadastro">Cadastro</a>
+            </li>
+            <!-- <li>
+                <a href="#inscrever">Inscreva-se</a>
+            </li> -->
         </ul>
-        <!-- <h3>Analytics</h3>
-        <ul>
-            <% analyticsList.forEach(item => { %>
-                <li><%= item %></li>
-            <% }) %> 
-        </ul> -->
+    </nav>
+       
+    <header>
+        <!-- <article>
+            <h1>POKEDÉX</h1>
+            <p>Conheça Todos os Pokemons Cadastrados até o momento</p>
+        </article> -->
+
         
-        <a id="inscrever" href="#inscrever">Inscreva-se agora!</a>
-    </article>
+    </header>
+    <section id="details">
+        <main class="detalhes">
+            <img src="<%= detailsPoke.imagem %>">
+            <div class="<%=detailsPoke.tipo%> titulo detalhes"><%=detailsPoke.nome%></div>
+            <div class="detalhes-card">
+            <div class="detalhes-texto">
+                <table>
+                    <tr>
+                        <td class="td-chave">Nome:</td>
+                        <td class="td-info"><%= detailsPoke.nome %> - <%= detailsPoke.numero %></td>
+                    </tr>
+                </table>
+                
+            </div>
+             </div>
+        </main>
+    </section>
+ 
+
+    <script src="/js/script.js"></script>
+
+    <footer>
+        <p>
+           &copy; Todos os Direitos Reservados. Projeto Desenvolvido por Valdenir S. Brito - < The future is blue /> <a href="https://blueedtech.com.br/" target="_blank"> BlueEdtech</a>
+        </p>
+    </footer>
+       
 </body>
 </html>

@@ -14,18 +14,14 @@ const pokedex = [];
 
 
 app.get("/", (req, res) => {
-  const devList = ["Backend", "Frontend", "Fullstack"];
-  const analyticsList = ["Engenharia de dados", "Ciência de dados"];
-  
+    
   setTimeout(() => {
     message = "";
   }, 1000);
 
   res.render("index", {
-    titulo: "Blue",
-    devList: devList,
-    analyticsList: analyticsList,
-    pokedex: pokedex,
+    titulo: "Pokedéx",
+    pokedex,
     message,
   });
 });
@@ -33,8 +29,20 @@ app.get("/", (req, res) => {
 app.get("/cadastro", (req, res) => {
     res.render("cadastro"); // Nome do arquivo, o EJS já busca dentro da pasta views.
 });
-app.get("/detalhes", (req, res) => {
-    res.render("detalhes"); // Nome do arquivo, o EJS já busca dentro da pasta views.
+app.get("/detalhes/:poke", (req, res) => {
+    
+  // res.render("detalhes", {
+  //   titulo: "Pokedéx",
+  //   pokedex,
+    
+  // });
+    Object.values(pokedex);
+    let detalhe = req.params.poke;
+    let detailsPoke = pokedex.find(x => x.numero == detalhe)
+    res.render("detalhes", {
+      pokedex: pokedex,
+      detailsPoke,
+    }); // Nome do arquivo, o EJS já busca dentro da pasta views.
 });
 app.post("/new", (req, res) => {
   const { numero, nome, tipo, imagem, descricao, altura, peso, categoria, habilidade} = req.body;

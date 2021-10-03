@@ -42,10 +42,10 @@
 
         
     </header>
-
+    <% pokedex.forEach(item => { %>
     <section id="pokedex">
         
-        <% pokedex.forEach(item => { %>
+        
             <div class="item-pokedex">
                 <div class="item-titulo <%= item.nome %>">
                     <a href="/detalhes/<%= item.nome %>">
@@ -62,9 +62,11 @@
                     
                 </div>
             </div>
-        <% }) %>
-        
-</section>
+                
+    </section>
+    <% }) %>
+
+ 
 
     <script src="/js/script.js"></script>
 
