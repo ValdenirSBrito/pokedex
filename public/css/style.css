@@ -121,6 +121,45 @@
     text-align: center;
   }
   
+  div.item-imagem {
+    width: 20rem;
+    padding: 3rem;
+    box-shadow: 0 0 1rem #00000060;
+    margin: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    
+  }
+
+  div.item-imagem:hover {
+    transform: scale(1.1);
+  }
+
+  div.item-imagem img {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  div.item-imagem h2 {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    color: #000;
+  }
+
+  div.item-imagem h4 {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    color: #000;
+  }
   
   a.card {
     width: 20rem;
@@ -162,6 +201,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
   }
   
   section#cadastrar {
@@ -264,36 +304,48 @@
     border-radius: 2rem;
     padding: 3rem;
     box-shadow: 0 0 1rem #00000060;
+    
+    
+  }
+
+  section#details #img-pokemon {
+    width: 50%;
+    
+    
   }
   
   section#details div#infos p {
     font-size: 2rem;
     padding-bottom: 3rem;
+    color: #000;
   }
   
   section#details div#infos div#info-datail {
     background-color: #ccc;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    width: 60%;
+    width: 80%;
     border-radius: 1rem;
+    
   }
+  
   
   section#details div#infos div#info-datail h3 {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 100;
     padding: 0.5rem 0 1rem 0;
   }
   
   section#details div#infos h3 {
     padding-top: 3rem;
     font-size: 2rem;
+    color: #000;
   }
   
   section#details div#infos h2 {
-    background-color: rgb(255, 47, 47);
+    background-color: rgb(24, 114, 2);
     padding: 1rem;
     color: #fff;
     border-radius: 1rem;
@@ -301,10 +353,15 @@
     text-align: center;
     margin-top: 1rem;
   }
+
   footer {
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
+    margin-top: 100px;
+    background-color: #fff;
+    color: #000;
+    height: 60px;
     
   }

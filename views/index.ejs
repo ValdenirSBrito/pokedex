@@ -47,20 +47,22 @@
         
         
             <div class="item-pokedex">
-                <div class="item-titulo <%= item.nome %>">
+                <!-- <div class="item-titulo <%= item.nome %>">
                     <a href="/detalhes/<%= item.nome %>">
                         <%= item.nome %></a>
-                </div>
+                </div> -->
                 <div class="item-imagem">
                     <a href="/detalhes/<%= item.numero %>">
                     <img src="<% if (item.imagem == "" || !item.imagem) { %>./assets/img/question.png">
                     <% } else { %><%= item.imagem %>"> <% } %></a>
+                    <h2><%= item.nome%></h2>
+                    <h4><%= item.tipo %></h4>
                 </div>
-                <div class="item-tipo">
+                <!-- <div class="item-tipo">
                     <a href="/detalhes/<%= item.tipo %>">
                         <%= item.tipo %></a>
                     
-                </div>
+                </div> -->
             </div>
                 
     </section>

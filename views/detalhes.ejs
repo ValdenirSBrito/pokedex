@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -27,18 +28,36 @@
     </nav>
        
     <header>
-        <!-- <article>
-            <h1>POKEDÉX</h1>
-            <p>Conheça Todos os Pokemons Cadastrados até o momento</p>
-        </article> -->
-
-        
+        <h1>
+            <%= detailsPoke.nome%><span style="font-weight: 200"> - <%= detailsPoke.numero%> </span>
+        </h1>
     </header>
     <section id="details">
-        <main class="detalhes">
-            <img src="<%= detailsPoke.imagem %>">
+        <img id="img-pokemon" src="<%= detailsPoke.imagem %>">
+        <div id="infos">
+            <p><%= detailsPoke.descricao%></p>
+            <div id="info-datail">
+                <div class='col'>
+                    <h4>Altura:</h4>
+                    <h3><%= detailsPoke.altura%></h3>
+                    <h4>Peso:</h4>
+                    <h3><%= detailsPoke.peso%></h3>
+                </div>
+                <div class='col'>
+                    <h4>Categoria:</h4>
+                    <h3><%= detailsPoke.categoria%></h3>
+                    <h4>Habilidade:</h4>
+                    <h3><%= detailsPoke.habilidade%></h3>
+                </div>
+            </div>
+            <h3>Tipo:</h3>
+            <h2><%= detailsPoke.tipo%></h2>
+        </div>
+        <!-- <main class="detalhes">
+            
             <div class="<%=detailsPoke.tipo%> titulo detalhes"><%=detailsPoke.nome%></div>
-            <div class="detalhes-card">
+            <div id="detalhes-card">
+                <img src="<%= detailsPoke.imagem %>">
             <div class="detalhes-texto">
                 <table>
                     <tr>
@@ -49,7 +68,7 @@
                 
             </div>
              </div>
-        </main>
+        </main> -->
     </section>
  
 
