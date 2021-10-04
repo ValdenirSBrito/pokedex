@@ -7,6 +7,7 @@
   }
   
   body {
+    
     background: linear-gradient(
       0deg,
       rgb(248, 97, 97) 0%,
@@ -216,6 +217,7 @@
     border-radius: 1rem;
     width: 50%;
     position: relative;
+    
     
   }
   
